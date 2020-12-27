@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import renderer from "react-test-renderer";
-import Tabs from "./Tabs";
 import { shallow } from "enzyme";
+import toJson from "enzyme-to-json";
+import Tabs from "./Tabs";
 
 describe("Tabs Component", () => {
   // array of objects, each with a name and content property
@@ -42,5 +43,6 @@ describe("Tabs Component", () => {
     // the shallow function in Enzyme will create a wrapper instance of our component that we can interact with.
     //Wrapper allows us to find nodes within this component's tree; also allows us to simulate events on nodes
     const wrapper = shallow(<Tabs />);
+    toJson(wrapper);
   });
 });
