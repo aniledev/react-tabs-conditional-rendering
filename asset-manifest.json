@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/react-tabs-conditional-rendering/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/react-tabs-conditional-rendering/static/js/main.f83b98ed.chunk.js",
+    "main.js.map": "/react-tabs-conditional-rendering/static/js/main.f83b98ed.chunk.js.map",
+    "runtime-main.js": "/react-tabs-conditional-rendering/static/js/runtime-main.4e60643a.js",
+    "runtime-main.js.map": "/react-tabs-conditional-rendering/static/js/runtime-main.4e60643a.js.map",
+    "static/js/2.a27b6b9b.chunk.js": "/react-tabs-conditional-rendering/static/js/2.a27b6b9b.chunk.js",
+    "static/js/2.a27b6b9b.chunk.js.map": "/react-tabs-conditional-rendering/static/js/2.a27b6b9b.chunk.js.map",
+    "index.html": "/react-tabs-conditional-rendering/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/react-tabs-conditional-rendering/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.a27b6b9b.chunk.js.LICENSE.txt": "/react-tabs-conditional-rendering/static/js/2.a27b6b9b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4e60643a.js",
+    "static/js/2.a27b6b9b.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.f83b98ed.chunk.js"
+  ]
+}
