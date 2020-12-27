@@ -4,7 +4,7 @@ export default class Tabs extends React.Component {
   static defaultProps = { tabs: [] };
 
   state = {
-    currentTab: 0,
+    currentTabIndex: 0,
   };
 
   renderButtons() {
@@ -16,7 +16,8 @@ export default class Tabs extends React.Component {
 
   renderContent() {
     // access the first tab from props array
-    const currentTab = this.props.tabs[0];
+    const { currentTabIndex } = this.state;
+    const currentTab = this.props.tabs[currentTabIndex];
     return <div className="content">{currentTab.content}</div>;
   }
 
