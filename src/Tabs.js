@@ -7,10 +7,16 @@ export default class Tabs extends React.Component {
     currentTabIndex: 0,
   };
 
+  handleClick = () => {
+    console.log("clicked!");
+  };
+
   renderButtons() {
     // map off the tabs array that was passed from App to make an array of buttons
     return this.props.tabs.map((tab, index) => (
-      <button key={index}>{tab.name}</button>
+      <button key={index} onClick={this.handleClick}>
+        {tab.name}
+      </button>
     ));
   }
 
