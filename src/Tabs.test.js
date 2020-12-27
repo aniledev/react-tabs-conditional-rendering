@@ -23,14 +23,14 @@ describe("Tabs Component", () => {
     },
   ];
 
-  // start with a smoke test inside a describe block
+  // start with a smoke test inside a describe block; does the component render
   it("should render without errors", () => {
     const div = document.createElement("div");
     ReactDOM.render(<Tabs />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 
-  //snapshot test using react-test-renderer
+  //snapshot test using react-test-renderer; does the component render properly
   it("should render the first tab by default", () => {
     const tree = renderer.create(<Tabs tabs={tabsProp} />).toJSON();
     expect(tree).toMatchSnapshot();
