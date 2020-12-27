@@ -32,7 +32,7 @@ describe("Tabs Component", () => {
   });
 
   //snapshot test using enzyme; does the component render properly
-  it("renders the first tab by default", () => {
+  it("should render the first tab by default", () => {
     const wrapper = shallow(<Tabs tabs={tabsProp} />);
     expect(toJson(wrapper)).toMatchSnapshot();
   });
@@ -42,6 +42,13 @@ describe("Tabs Component", () => {
     // the shallow function in Enzyme will create a wrapper instance of our component that we can interact with.
     //Wrapper allows us to find nodes within this component's tree; also allows us to simulate events on nodes
     const wrapper = shallow(<Tabs />);
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
+  //use enzyme to simulate a click interaction on the tab at index 1
+  it("should close the first tab and opens any clicked tab", () => {
+    const wrapper = shallow(<Tabs tabs={tabsProp} />);
+    wrapper.find("button").at(1).simulate("click");
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 });
