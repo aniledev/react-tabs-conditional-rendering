@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import renderer from "react-test-renderer";
 import Tabs from "./Tabs";
+import { shallow } from "enzyme";
 
 describe("Tabs Component", () => {
   // array of objects, each with a name and content property
@@ -34,5 +35,12 @@ describe("Tabs Component", () => {
   it("should render the first tab by default", () => {
     const tree = renderer.create(<Tabs tabs={tabsProp} />).toJSON();
     expect(tree).toMatchSnapshot();
+  });
+
+  // make a new test for when there are no tabs passed as a prop to the component
+  it("should render empty given no tabs", () => {
+    // the shallow function in Enzyme will create a wrapper instance of our component that we can interact with.
+    //Wrapper allows us to find nodes within this component's tree; also allows us to simulate events on nodes
+    const wrapper = shallow(<Tabs />);
   });
 });
