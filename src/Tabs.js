@@ -1,12 +1,14 @@
 import React from "react";
-import { render } from "react-dom";
 
 export default class Tabs extends React.Component {
   static defaultProps = { tabs: [] };
 
-  // map off the tabs array that was passed from App to make an array of buttons
+  state = {
+    currentTab: 0,
+  };
 
   renderButtons() {
+    // map off the tabs array that was passed from App to make an array of buttons
     return this.props.tabs.map((tab, index) => (
       <button key={index}>{tab.name}</button>
     ));
