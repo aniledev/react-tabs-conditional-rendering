@@ -34,7 +34,7 @@ export default class Tabs extends React.Component {
         {this.renderButtons()}
         {/* Display the first tab content by default */}
         {/* Use the logical and operator to only show content when the tabs array has length, this avoids this.props.currentTab from being undefined*/}
-        {this.props.tabs.length && this.renderContent()}
+        {!!this.props.tabs.length && this.renderContent()}
       </div>
     );
   }

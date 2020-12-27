@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import renderer from "react-test-renderer";
 import { shallow } from "enzyme";
 import toJson from "enzyme-to-json";
 import Tabs from "./Tabs";
@@ -32,10 +31,10 @@ describe("Tabs Component", () => {
     ReactDOM.unmountComponentAtNode(div);
   });
 
-  //snapshot test using react-test-renderer; does the component render properly
-  it("should render the first tab by default", () => {
-    const tree = renderer.create(<Tabs tabs={tabsProp} />).toJSON();
-    expect(tree).toMatchSnapshot();
+  //snapshot test using enzyme; does the component render properly
+  it("renders the first tab by default", () => {
+    const wrapper = shallow(<Tabs tabs={tabsProp} />);
+    expect(toJson(wrapper)).toMatchSnapshot();
   });
 
   // make a new test for when there are no tabs passed as a prop to the component
@@ -43,6 +42,6 @@ describe("Tabs Component", () => {
     // the shallow function in Enzyme will create a wrapper instance of our component that we can interact with.
     //Wrapper allows us to find nodes within this component's tree; also allows us to simulate events on nodes
     const wrapper = shallow(<Tabs />);
-    toJson(wrapper);
+    expect(toJson(wrapper)).toMatchSnapshot();
   });
 });
