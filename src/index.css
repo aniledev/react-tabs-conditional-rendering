@@ -13,16 +13,19 @@ code {
     monospace;
 }
 
-button {
+.buttons {
+  border-bottom: 2px solid #ada5b6;
   background-color: #ebe9ed;
+  border-radius: 5px;
+}
+
+button {
   color: #2c5784;
   border: none;
-  border-bottom: 2px solid #ada5b6;
-  border-right: 1px solid #ada5b6;
+  border-right: 2px solid #8e849a;
   font-size: 16px;
   padding-left: 20px;
   padding-right: 20px;
-  margin-bottom: 15px;
   height: 30px;
   width: 130px;
   font-weight: bold;
@@ -32,7 +35,7 @@ button:nth-child(1) {
   padding-left: 35px;
 }
 
-button:nth-child(3) {
-  border-right: none;
-  padding-right: 35px;
+.content {
+  font-size: 17px;
+  margin-top: 20px;
 }

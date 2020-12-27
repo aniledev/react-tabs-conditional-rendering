@@ -16,11 +16,13 @@ export default class Tabs extends React.Component {
 
   renderButtons() {
     // map off the tabs array that was passed from App to make an array of buttons
-    return this.props.tabs.map((tab, index) => (
+    const buttons = this.props.tabs.map((tab, index) => (
       <button key={index} onClick={() => this.handleClick(index)}>
         {tab.name}
       </button>
     ));
+
+    return <div className="buttons">{buttons}</div>;
   }
 
   renderContent() {
