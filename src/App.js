@@ -1,4 +1,3 @@
-import "./App.css";
 import Tabs from "./Tabs";
 
 // test props are array of objects each with a name and content
